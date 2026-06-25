@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>link cardapio</title>
+  <link rel="stylesheet" href="/src/css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Anna Lanches</h1>
+    <p>"Sabor que conquista, qualidade que você sente!"</p>
+  </header>
+
+  <div class="container">
+
+    <!-- COMBOS -->
+    <section>
+      <h2>Combos</h2>
+
+      <div class="menu-item">
+        <div class="item-details">
+          <div class="item-title">Barca Monstruosa</div>
+          <div class="item-description">2 X-tudo, 1 porção de calabresa acebolada, 1 porção de batata c/ bacon, cheddar
+            e catupiry.</div>
+        </div>
+        <div class="item-price-action">
+          <span class="item-price">R$ 110,00</span>
+          <button class="add-btn" onclick="addToCart('Barca Monstruosa', 110.00)">+</button>
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <div class="item-details">
+          <div class="item-title">Casal Fome</div>
+          <div class="item-description">2 X-salada, 1 porção de batata frita 200g com bacon e cheddar, 1 suco de caju
+            garrafa 500ml.</div>
+        </div>
+        <div class="item-price-action">
+          <span class="item-price">R$ 55,00</span>
+          <button class="add-btn" onclick="addToCart('Casal Fome', 55.00)">+</button>
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <div class="item-details">
+          <div class="item-title">To de Boa</div>
+          <div class="item-description">1 X-salada, 1 porção de batata 200g com bacon, cheddar e catupiry, 1 Coca lata
+            mini.</div>
+        </div>
+        <div class="item-price-action">
+          <span class="item-price">R$ 35,00</span>
+          <button class="add-btn" onclick="addToCart('To de Boa', 35.00)">+</button>
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <div class="item-details">
+          <div class="item-title">Mix Completo</div>
+          <div class="item-description">3 X-salada, porção de batata frita com cheddar e catupiry, calabresa acebolada,
+            steak de frango.</div>
+        </div>
+        <div class="item-price-action">
+          <span class="item-price">R$ 120,00</span>
+          <button class="add-btn" onclick="addToCart('Mix Completo', 120.00)">+</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- X-LANCHES -->
+    <section>
+      <h2>X-Lanches</h2>
+
+      <div class="menu-item">
+        <div class="item-details">
+          <div class="item-title">X-Bauri</div>
+          <div class="item-description">Pão de forma, Mussarela, Presunto e Tomate.</div>
+        </div>
+        <div class="item-price-action">
+          <span class="item-price">R$ 12,00</span>
+          <button class="add-btn" onclick="addToCart('X-Bauri', 12.00)">+</button>
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <div class="item-details">
+          <div class="item-title">X-Salada</div>
+          <div class="item-description">Pão, Hambúrguer de Carne, Mussarela, Ovo, Alface, Tomate e Milho.</div>
+        </div>
+        <div class="item-price-action">
+          <span class="item-price">R$ 18,00</span>
+          <button class="add-btn" onclick="addToCart('X-Salada', 18.00)">+</button>
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <div class="item-details">
+          <div class="item-title">X-Tudo</div>
+          <div class="item-description">Pão, Hambúrguer, Carne, Ovo, Mussarela, Presunto, Salsicha, Bacon, Calabresa,
+            Alface, Tomate, Milho, Batata, Palmito e Azeitona.</div>
+        </div>
+        <div class="item-price-action">
+          <span class="item-price">R$ 30,00</span>
+          <button class="add-btn" onclick="addToCart('X-Tudo', 30.00)">+</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- CREMES E SUCOS (ATUALIZADO COM SELEÇÃO DE SABORES) -->
+    <section>
+      <h2>Cremes, Sucos e Refrigerantes</h2>
+
+      <!-- CREMES -->
+      <div class="menu-item">
+        <div class="item-details">
+          <div class="item-title">Cremes Taças - 600ml</div>
+          <div class="item-description">Escolha o sabor desejado:</div>
+          <select id="sabor-creme" class="sabor-select">
+            <option value="">-- Escolha um Sabor --</option>
+            <option value="Maracujá">Maracujá</option>
+            <option value="Cupuaçu">Cupuaçu</option>
+            <option value="Graviola">Graviola</option>
+            <option value="Morango">Morango</option>
+            <option value="Acerola">Acerola</option>
+          </select>
+        </div>
+        <div class="item-price-action">
+          <span class="item-price">R$ 20,00</span>
+          <button class="add-btn" onclick="addComSabor('Cremes Taças 600ml', 'sabor-creme', 20.00)">+</button>
+        </div>
+      </div>
+
+      <!-- SUCOS -->
+      <div class="menu-item">
+        <div class="item-details">
+          <div class="item-title">Sucos Copo - 500ml</div>
+          <div class="item-description">Escolha o sabor desejado:</div>
+          <select id="sabor-suco" class="sabor-select">
+            <option value="">-- Escolha um Sabor --</option>
+            <option value="Laranja">Laranja</option>
+            <option value="Morango">Morango</option>
+            <option value="Cupuaçu">Cupuaçu</option>
+            <option value="Abacaxi">Abacaxi</option>
+            <option value="Caju">Caju</option>
+            <option value="Maracujá">Maracujá</option>
+            <option value="Tamarino">Tamarino</option>
+            <option value="Abacaxi c/ Hortelã">Abacaxi c/ Hortelã</option>
+            <option value="Graviola">Graviola</option>
+            <option value="Acerola">Acerola</option>
+          </select>
+        </div>
+        <div class="item-price-action">
+          <span class="item-price">R$ 15,00</span>
+          <button class="add-btn" onclick="addComSabor('Sucos Copo 500ml', 'sabor-suco', 15.00)">+</button>
+        </div>
+      </div>
+
+      <!-- REFRIGERANTES -->
+      <div class="menu-item">
+        <div class="item-details">
+          <div class="item-title">Coca-Cola 2 Litros</div>
+        </div>
+        <div class="item-price-action">
+          <span class="item-price">R$ 14,00</span>
+          <button class="add-btn" onclick="addToCart('Coca-Cola 2L', 14.00)">+</button>
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <div class="item-details">
+          <div class="item-title">Coca-Cola Lata</div>
+        </div>
+        <div class="item-price-action">
+          <span class="item-price">R$ 6,00</span>
+          <button class="add-btn" onclick="addToCart('Coca-Cola Lata', 6.00)">+</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- PORÇÕES -->
+    <section>
+      <h2>Porções</h2>
+      <div class="menu-item">
+        <div class="item-details">
+          <div class="item-title">Batata Especial 500g</div>
+          <div class="item-description">C/ Bacon, queijo e catupiry.</div>
+        </div>
+        <div class="item-price-action">
+          <span class="item-price">R$ 45,00</span>
+          <button class="add-btn" onclick="addToCart('Batata Especial 500g', 45.00)">+</button>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- BARRA DE CARRINHO FIXA -->
+  <div class="cart-bar">
+    <div class="cart-info">
+      <strong>Total:</strong> R$ <span id="cart-total">0,00</span>
+    </div>
+    <button class="checkout-btn" onclick="sendWhatsApp()">
+      Pedir pelo Delivery
+    </button>
+  </div>
+
+  <script src="/src/js/main.js"></script>
+</body>
+</html>
