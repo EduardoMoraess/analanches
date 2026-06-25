@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>link cardapio</title>
   <link rel="stylesheet" href="/src/css/style.css">
 </head>
+
 <body>
   <header>
     <h1>Anna Lanches</h1>
@@ -180,17 +182,66 @@
     <!-- PORÇÕES -->
     <section>
       <h2>Porções</h2>
+
+      <!-- Frango a passarinho -->
       <div class="menu-item">
         <div class="item-details">
-          <div class="item-title">Batata Especial 500g</div>
+          <div class="item-title">Porção 500g de frango a passarinho</div>
+          <div class="item-description">Acompanha 1 porção de arroz, alface e tomate.</div>
+        </div>
+        <div class="item-price-action">
+          <span class="item-price">R$ 29,00</span>
+          <button class="add-btn" onclick="addToCart('Porção 500g de frango a passarinho', 29.00)">+</button>
+        </div>
+      </div>
+
+      <!-- Calabresa acelerar -->
+      <div class="menu-item">
+        <div class="item-details">
+          <div class="item-title">Calabresa acelerar c/ 400g de batata frita</div>
+          <div class="item-description">Calabresa acebolada especial da casa acompanhada de batata frita.</div>
+        </div>
+        <div class="item-price-action">
+          <span class="item-price">R$ 35,00</span>
+          <button class="add-btn" onclick="addToCart('Calabresa acelerar c/ 400g de batata frita', 35.00)">+</button>
+        </div>
+      </div>
+
+      <!-- Filé de tilapia -->
+      <div class="menu-item">
+        <div class="item-details">
+          <div class="item-title">Filé de tilápia 400g</div>
+          <div class="item-description">Porção de filé de tilápia bem sequinho e crocante.</div>
+        </div>
+        <div class="item-price-action">
+          <span class="item-price">R$ 40,00</span>
+          <button class="add-btn" onclick="addToCart('Filé de tilápia 400g', 40.00)">+</button>
+        </div>
+      </div>
+
+      <!-- Batata simples -->
+      <div class="menu-item">
+        <div class="item-details">
+          <div class="item-title">Batata simples 500g</div>
+          <div class="item-description">Porção tradicional de batata frita crocante.</div>
+        </div>
+        <div class="item-price-action">
+          <span class="item-price">R$ 27,00</span>
+          <button class="add-btn" onclick="addToCart('Batata simples 500g', 27.00)">+</button>
+        </div>
+      </div>
+
+      <!-- Batata especial -->
+      <div class="menu-item">
+        <div class="item-details">
+          <div class="item-title">Batata especial 500g</div>
           <div class="item-description">C/ Bacon, queijo e catupiry.</div>
         </div>
         <div class="item-price-action">
           <span class="item-price">R$ 45,00</span>
-          <button class="add-btn" onclick="addToCart('Batata Especial 500g', 45.00)">+</button>
+          <button class="add-btn" onclick="addToCart('Batata especial 500g', 45.00)">+</button>
         </div>
       </div>
-    </section>
 
   </div>
 
@@ -206,4 +257,5 @@
 
   <script src="/src/js/main.js"></script>
 </body>
+
 </html>
