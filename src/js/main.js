@@ -31,7 +31,7 @@ function sendWhatsApp() {
     return;
   }
 
-  let phone = "5564996454479"; // Número retirado da imagem caradpio2.png
+  let phone = "5564999350661"; // Número retirado da imagem caradpio2.png
   let text = "Olá! Gostaria de fazer o seguinte pedido do Anna Lanches:\n\n";
 
   cart.forEach((item, index) => {
